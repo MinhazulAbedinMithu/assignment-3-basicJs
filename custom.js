@@ -2,7 +2,7 @@
 
 //1. kilometer to meter convert:
 function kilometerToMeter(kilometer){
-    if(typeof kilometer === 'number'){
+    if(typeof kilometer === 'number' && kilometer >= 0 ){
         meter = kilometer * 1000;
         return meter;
     }else{
@@ -12,7 +12,7 @@ function kilometerToMeter(kilometer){
 
 //2. budget Calculaton for>> watch=50, phone=100, laptop=500.
 function budgetCalculator(watch, phone, laptop){
-    if(watch%1==0 && phone%1==0 && laptop%1==0){
+    if(watch%1==0 && phone%1==0 && laptop%1==0 && watch>=0 && phone>=0 && laptop>=0){
         watch*=50;
         phone*=100;
         laptop*=500;
@@ -25,7 +25,7 @@ function budgetCalculator(watch, phone, laptop){
 
 //3. hotel cost for>> (1-10)days=100, (11-20)days=80, (21--)days=50.
 function hotelCost(days){
-    if(typeof days === "number"){
+    if(typeof days === "number" && days >= 0){
         if(days<=10){
             livingCost = days*100;
         }else if(days<=20){
@@ -62,15 +62,15 @@ function megaFriend(friends){
 }
 
 //1 input: kilometer to meter>>>
-var meter = kilometerToMeter(6.7);
+var meter = kilometerToMeter(0);
 console.log(meter);
 
 //2 input: budgetCalculator>>>
-var totalPrice = budgetCalculator(4, 5, 2);
+var totalPrice = budgetCalculator(4, 5, 0);
 console.log(totalPrice);
 
 //3 input: hotelCost>>>
-var livingCost = hotelCost(33);
+var livingCost = hotelCost(0);
 console.log(livingCost);
 
 //4 input: max element of array>>>
