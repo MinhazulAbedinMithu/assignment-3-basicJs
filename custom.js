@@ -12,7 +12,7 @@ function kilometerToMeter(kilometer){
 
 //2. budget Calculaton for>> watch=50, phone=100, laptop=500.
 function budgetCalculator(watch, phone, laptop){
-    if(watch%1==0 && phone%1==0 && laptop%1==0 && watch>=0 && phone>=0 && laptop>=0){
+    if(typeof watch==='number' && typeof watch==='number'&& typeof laptop==='number' && watch%1===0 && phone%1===0 && laptop%1===0 && watch>=0 && phone>=0 && laptop>=0){
         watch*=50;
         phone*=100;
         laptop*=500;
